@@ -1,5 +1,6 @@
 package lab2;
 
+import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.Writable;
 
 import java.io.DataInput;
@@ -10,7 +11,9 @@ public class AirportNameWritable implements Writable {
 
     private String airportName;
 
-    
+    public AirportNameWritable(Text text) {
+        
+    }
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
