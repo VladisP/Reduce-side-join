@@ -22,10 +22,9 @@ public class FlightTableWritable implements Writable {
 
         String potentialDelayTime = columns[17].replaceAll("\"", "");
 
-        delayTime = potentialDelayTime.equals("ARR_DELAY") ? null :
-                potentialDelayTime.equals("") ? null :
-                        Float.parseFloat(potentialDelayTime) > 0 ? null :
-                                potentialDelayTime.replaceAll("-", "");
+        delayTime = potentialDelayTime.equals("") ? null :
+                Float.parseFloat(potentialDelayTime) > 0 ? null :
+                        potentialDelayTime.replaceAll("-", "");
     }
 
     public int getDestAirportId() {

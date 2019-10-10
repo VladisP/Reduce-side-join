@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35c86273-25b9-4522-a5bf-bc90e5a8bcdc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/lab2/mappers/AirportsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab2/mappers/AirportsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lab2/writables/AirportTableWritable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab2/writables/AirportTableWritable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lab2/writables/FlightTableWritable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab2/writables/FlightTableWritable.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

@@ -15,7 +15,10 @@ public class AirportsMapper extends Mapper<LongWritable, Text, AirportsIdWritabl
 
         AirportTableWritable airportTable = new AirportTableWritable(value);
 
-        context.write(new AirportsIdWritable(airportTable.getAirportId(), 0),
-                new Text(airportTable.getAirportName()));
+        if (airportTable.getAirportId() != -1) {
+
+            context.write(new AirportsIdWritable(airportTable.getAirportId(), 0),
+                    new Text(airportTable.getAirportName()));
+        }
     }
 }
