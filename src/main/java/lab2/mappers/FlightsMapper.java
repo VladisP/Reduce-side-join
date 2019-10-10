@@ -15,7 +15,7 @@ public class FlightsMapper extends Mapper<LongWritable, Text, AirportsIdWritable
 
         FlightTableWritable flightTable = new FlightTableWritable(value);
 
-        if (flightTable.getDelayTime() != null) {
+        if ((flightTable.getDestAirportId() != -1) && (flightTable.getDelayTime() != null)) {
 
             context.write(new AirportsIdWritable(flightTable.getDestAirportId(), 1),
                     new Text(flightTable.getDelayTime()));

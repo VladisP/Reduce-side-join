@@ -14,7 +14,10 @@ public class AirportTableWritable implements Writable {
 
     public AirportTableWritable(Text text) {
         String[] columns = text.toString().replaceAll("\"", "").split(",");
-        airportId = Integer.parseInt(columns[0]);
+
+        String potentialAirportId = columns[0];
+
+        airportId = potentialAirportId.equals() Integer.parseInt(columns[0]);
         airportName = columns[1];
     }
 
