@@ -26,6 +26,8 @@ public class FlightTableWritable implements Writable {
                 potentialDelayTime.equals("") ? null :
                         Float.parseFloat(potentialDelayTime) > 0 ? null :
                                 potentialDelayTime.replaceAll("-", "");
+
+        System.out.println(delayTime);
     }
 
     public int getDestAirportId() {

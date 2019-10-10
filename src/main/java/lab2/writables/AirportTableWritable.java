@@ -19,7 +19,6 @@ public class AirportTableWritable implements Writable {
         airportId = potentialAirportId.equals("Code") ? -1 : Integer.parseInt(columns[0]);
 
         airportName = columns[1];
-        System.out.println(airportName);
     }
 
     public int getAirportId() {
