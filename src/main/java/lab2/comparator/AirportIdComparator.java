@@ -6,6 +6,10 @@ import org.apache.hadoop.io.WritableComparator;
 
 public class AirportIdComparator extends WritableComparator {
 
+    AirportIdComparator() {
+        
+    }
+
     @Override
     public int compare(WritableComparable a, WritableComparable b) {
         int firstAirportId = ((AirportsIdWritable) a).getAirportId();
