@@ -9,6 +9,7 @@ import java.io.IOException;
 
 public class AirportTableWritable implements Writable {
 
+    private String airportId;
     private String airportName;
 
     public AirportTableWritable(Text text) {
@@ -17,6 +18,7 @@ public class AirportTableWritable implements Writable {
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
+        dataOutput.writeBytes(airportId);
         dataOutput.writeBytes(airportName);
     }
 
