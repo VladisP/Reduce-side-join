@@ -15,7 +15,7 @@ public class FlightTableWritable implements Writable {
     public FlightTableWritable(Text text) {
         String[] columns = text.toString().replaceAll(",", "\"").split(",");
         destAirportId = Integer.parseInt(columns[14].replaceAll("\"",""));
-        
+        String potential
         delayTime = columns[17].replaceAll("\"", "");
     }
 
