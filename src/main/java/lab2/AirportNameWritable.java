@@ -12,11 +12,11 @@ public class AirportNameWritable implements Writable {
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-
+        dataOutput.writeBytes(airportName);
     }
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
-
+        dataInput.rex
     }
 }
