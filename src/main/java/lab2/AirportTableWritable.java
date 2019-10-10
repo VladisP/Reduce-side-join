@@ -7,12 +7,12 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-public class AirportNameWritable implements Writable {
+public class AirportTableWritable implements Writable {
 
     private String airportName;
 
-    public AirportNameWritable(Text text) {
-        
+    public AirportTableWritable(Text text) {
+
     }
 
     @Override
