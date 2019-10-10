@@ -36,7 +36,8 @@ public class DelayReducer extends Reducer<AirportsIdWritable, Text, Text, Text> 
         }
 
         if (count != 0) {
-            context.write(airportName, );
+            
+            context.write(airportName, new Text());
         }
     }
 }
