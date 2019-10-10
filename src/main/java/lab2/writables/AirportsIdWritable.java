@@ -1,4 +1,4 @@
-package lab2;
+package lab2.writables;
 
 import org.apache.hadoop.io.WritableComparable;
 

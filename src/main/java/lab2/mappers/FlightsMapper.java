@@ -1,7 +1,7 @@
 package lab2.mappers;
 
-import lab2.AirportsIdWritable;
-import lab2.FlightTableWritable;
+import lab2.writables.AirportsIdWritable;
+import lab2.writables.FlightTableWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
