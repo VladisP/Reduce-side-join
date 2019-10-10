@@ -1,0 +1,9 @@
+/home/vladislav/Labs/lab2/Reduce-side-join/src/main/java/lab2/writables/AirportTableWritable.java
+/home/vladislav/Labs/lab2/Reduce-side-join/src/main/java/lab2/mappers/AirportsMapper.java
+/home/vladislav/Labs/lab2/Reduce-side-join/src/main/java/lab2/ReduceSideJoin.java
+/home/vladislav/Labs/lab2/Reduce-side-join/src/main/java/lab2/partitioner/AirportIdPartitioner.java
+/home/vladislav/Labs/lab2/Reduce-side-join/src/main/java/lab2/writables/FlightTableWritable.java
+/home/vladislav/Labs/lab2/Reduce-side-join/src/main/java/lab2/comparator/AirportIdComparator.java
+/home/vladislav/Labs/lab2/Reduce-side-join/src/main/java/lab2/reducer/DelayReducer.java
+/home/vladislav/Labs/lab2/Reduce-side-join/src/main/java/lab2/mappers/FlightsMapper.java
+/home/vladislav/Labs/lab2/Reduce-side-join/src/main/java/lab2/writables/AirportsIdWritable.java
