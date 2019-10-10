@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class AirportTableWritable implements Writable {
 
-    private String airportId;
+    private int airportId;
     private String airportName;
 
     public AirportTableWritable(Text text) {
