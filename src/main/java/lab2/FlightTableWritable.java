@@ -8,7 +8,8 @@ import java.io.IOException;
 
 public class FlightTableWritable implements Writable {
 
-    
+    private int destAirportId;
+    private String airportName;
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
