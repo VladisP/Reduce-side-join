@@ -13,12 +13,12 @@ public class AirportTableWritable implements Writable {
     private String airportName;
 
     public AirportTableWritable(Text text) {
-        String[] columns = text.toString().split(",");
+        String[] columns = text.toString().replaceAll("\"", "").split(",");
 
         String potentialAirportId = columns[0];
         airportId = potentialAirportId.equals("Code") ? -1 : Integer.parseInt(columns[0]);
 
-        airportName = columns[1];
+        airportName = columns.length == columns[1];
     }
 
     public int getAirportId() {
