@@ -12,7 +12,6 @@ public class AirportsIdWritable implements WritableComparable<AirportsIdWritable
     private int dataSetId;
 
     public AirportsIdWritable() {
-
     }
 
     public AirportsIdWritable(int airportId, int dataSetId) {
