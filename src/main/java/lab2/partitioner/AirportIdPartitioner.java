@@ -1,4 +1,4 @@
-package lab2;
+package lab2.partitioner;
 
 import lab2.writables.AirportsIdWritable;
 import org.apache.hadoop.io.Text;
