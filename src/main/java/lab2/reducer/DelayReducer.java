@@ -15,8 +15,6 @@ public class DelayReducer extends Reducer<AirportsIdWritable, Text, Text, Text> 
         Iterator<Text> iterator = values.iterator();
         Text airportName = new Text(iterator.next());
 
-        System.out.println(key.getAirportId() + " " + key.getDataSetId() + " " + airportName);
-
         float maxDelayTime = Float.MIN_VALUE;
         float minDelayTime = Float.MAX_VALUE;
         float sumDelayTime = 0f;
@@ -24,8 +22,6 @@ public class DelayReducer extends Reducer<AirportsIdWritable, Text, Text, Text> 
 
         while (iterator.hasNext()) {
             float delayTime = Float.parseFloat(iterator.next().toString());
-
-            System.out.println(delayTime);
 
             if (delayTime > maxDelayTime) {
                 maxDelayTime = delayTime;
