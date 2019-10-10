@@ -7,6 +7,9 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 public class AirportNameWritable implements Writable {
+
+    private String airportName
+
     @Override
     public void write(DataOutput dataOutput) throws IOException {
 
