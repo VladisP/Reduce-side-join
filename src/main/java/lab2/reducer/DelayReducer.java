@@ -12,6 +12,6 @@ public class DelayReducer extends Reducer<AirportsIdWritable, Text, Text, Text> 
     @Override
     protected void reduce(AirportsIdWritable key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
 
-        Iterator<>
+        Iterator<Text> iterator = 
     }
 }
