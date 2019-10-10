@@ -15,11 +15,8 @@ public class FlightsMapper extends Mapper<LongWritable, Text, AirportsIdWritable
 
         FlightTableWritable flightTable = new FlightTableWritable(value);
 
-        Optional.ofNullable(flightTable.getDelayTime()).ifPresent(new Consumer<String>() {
-            @Override
-            public void accept(String s) {
-                context.write(new AirportsIdWritable(flightTable.getDestAirportId(), 1));
-            }
-        });
+        Optional.ofNullable(flightTable.getDelayTime()).
+                ifPresent(s -> context.write(new AirportsIdWritable(flightTable.getDestAirportId(), 1),
+                        new Text(s)));
     }
 }
