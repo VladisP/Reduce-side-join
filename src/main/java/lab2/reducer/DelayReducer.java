@@ -13,6 +13,6 @@ public class DelayReducer extends Reducer<AirportsIdWritable, Text, Text, Text> 
     protected void reduce(AirportsIdWritable key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
 
         Iterator<Text> iterator = values.iterator();
-        Text airportName = iterator.next() 
+        Text airportName = iterator.next();
     }
 }
