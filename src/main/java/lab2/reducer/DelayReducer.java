@@ -21,10 +21,19 @@ public class DelayReducer extends Reducer<AirportsIdWritable, Text, Text, Text> 
         int count = 0;
 
         while (iterator.hasNext()) {
+            float delayTime = Float.parseFloat(iterator.next().toString());
 
+            if (delayTime > maxDelayTime) {
+                maxDelayTime = delayTime;
+            }
+            if (delayTime < minDelayTime) {
+                minDelayTime = delayTime;
+            }
+            sumDelayTime += delayTime;
+            count++;
         }
 
-        if () {
+        if (count != 0) {
 
         }
     }
