@@ -6,6 +6,7 @@ public class AirportIdPartitioner<K,V> extends HashPartitioner<K,V> {
 
     @Override
     public int getPartition(K key, V value, int numReduceTasks) {
+
         return ;
     }
 }
