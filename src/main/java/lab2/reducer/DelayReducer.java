@@ -25,6 +25,8 @@ public class DelayReducer extends Reducer<AirportsIdWritable, Text, Text, Text> 
         while (iterator.hasNext()) {
             float delayTime = Float.parseFloat(iterator.next().toString());
 
+            System.out.println(delayTime);
+
             if (delayTime > maxDelayTime) {
                 maxDelayTime = delayTime;
             }
