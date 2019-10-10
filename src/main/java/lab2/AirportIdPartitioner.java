@@ -9,6 +9,6 @@ public class AirportIdPartitioner extends HashPartitioner<AirportsIdWritable, Te
     @Override
     public int getPartition(AirportsIdWritable key, Text value, int numReduceTasks) {
 
-        return Integer.valueOf(key.getAirportId()).hashCode();
+        return Integer.valueOf(key.getAirportId()).hashCode() & Integer.MAX_VALUE;
     }
 }
