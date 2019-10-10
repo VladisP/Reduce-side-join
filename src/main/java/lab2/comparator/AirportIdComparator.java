@@ -1,4 +1,4 @@
 package lab2.comparator;
 
-public class AirportIdComparator {
+public class AirportIdComparator  {
 }
