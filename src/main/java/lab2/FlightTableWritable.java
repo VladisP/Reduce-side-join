@@ -10,31 +10,23 @@ import java.io.IOException;
 public class FlightTableWritable implements Writable {
 
     private int destAirportId;
-    private String airportName;
+    private String delayTime;
 
-    public AirportTableWritable(Text text) {
-        String[] columns = text.toString().replaceAll("\"", "").split(",");
+    public FlightTableWritable(Text text) {
+        String[] columns = text.toString().replaceAll(",", "\"").split(",");
         airportId = Integer.parseInt(columns[0]);
-        airportName = columns[1];
-    }
-
-    public int getAirportId() {
-        return airportId;
-    }
-
-    public String getAirportName() {
-        return airportName;
+        delayTime = columns[1];
     }
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
         dataOutput.writeInt(airportId);
-        dataOutput.writeUTF(airportName);
+        dataOutput.writeUTF(delayTime);
     }
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
         airportId = dataInput.readInt();
-        airportName = dataInput.readUTF();
+        delayTime = dataInput.readUTF();
     }
 }
