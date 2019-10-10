@@ -15,8 +15,12 @@ public class DelayReducer extends Reducer<AirportsIdWritable, Text, Text, Text> 
         Iterator<Text> iterator = values.iterator();
         Text airportName = iterator.next();
 
+        float maxDelayTime = Float.MIN_VALUE;
+        float minDelayTime = Float.MAX_VALUE;
+        float 
+
         while (iterator.hasNext()) {
-            
+
         }
     }
 }
