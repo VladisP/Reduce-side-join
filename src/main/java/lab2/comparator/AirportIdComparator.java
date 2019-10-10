@@ -6,7 +6,7 @@ import org.apache.hadoop.io.WritableComparator;
 
 public class AirportIdComparator extends WritableComparator {
 
-    AirportIdComparator() {
+    protected AirportIdComparator() {
         
     }
 
