@@ -26,15 +26,17 @@ public class DelayReducer extends Reducer<AirportsIdWritable, Text, Text, Text> 
             if (delayTime > maxDelayTime) {
                 maxDelayTime = delayTime;
             }
+
             if (delayTime < minDelayTime) {
                 minDelayTime = delayTime;
             }
+
             sumDelayTime += delayTime;
             count++;
         }
 
         if (count != 0) {
-
+            context
         }
     }
 }
