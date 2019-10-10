@@ -18,6 +18,7 @@ public class AirportTableWritable implements Writable {
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
+        dataOutput.writeUTF();
         dataOutput.writeBytes(airportId);
         dataOutput.writeBytes(airportName);
     }
