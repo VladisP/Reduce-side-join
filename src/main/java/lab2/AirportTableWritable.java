@@ -18,6 +18,14 @@ public class AirportTableWritable implements Writable {
         airportName = columns[1];
     }
 
+    public String getAirportId() {
+        return airportId;
+    }
+
+    public String getAirportName() {
+        return airportName;
+    }
+
     @Override
     public void write(DataOutput dataOutput) throws IOException {
         dataOutput.writeUTF(airportId);
