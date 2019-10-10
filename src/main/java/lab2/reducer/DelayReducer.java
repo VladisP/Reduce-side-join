@@ -14,5 +14,9 @@ public class DelayReducer extends Reducer<AirportsIdWritable, Text, Text, Text> 
 
         Iterator<Text> iterator = values.iterator();
         Text airportName = iterator.next();
+
+        while (iterator.hasNext()) {
+            
+        }
     }
 }
