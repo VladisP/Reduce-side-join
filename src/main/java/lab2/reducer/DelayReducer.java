@@ -1,4 +1,6 @@
 package lab2.reducer;
 
-public class DelayReducer  {
+import org.apache.hadoop.mapreduce.Reducer;
+
+public class DelayReducer extends Reducer<> {
 }
