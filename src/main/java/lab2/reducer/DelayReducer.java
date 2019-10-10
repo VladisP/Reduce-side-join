@@ -40,7 +40,7 @@ public class DelayReducer extends Reducer<AirportsIdWritable, Text, Text, Text> 
         }
 
         if (count != 0) {
-            context.write(new Text(airportName), new Text(String.join(" ",
+            context.write(airportName, new Text(String.join(" ",
                     String.valueOf(sumDelayTime / count),
                     String.valueOf(minDelayTime),
                     String.valueOf(maxDelayTime))));
