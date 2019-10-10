@@ -7,6 +7,7 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 public class AirportsIdWritable implements WritableComparable<AirportsIdWritable> {
+
     @Override
     public int compareTo(AirportsIdWritable o) {
         return 0;
