@@ -24,7 +24,7 @@ public class FlightTableWritable implements Writable {
 
         delayTime = potentialDelayTime.equals("ARR_DELAY") ? null :
                 potentialDelayTime.equals("") ? null :
-                        Float.parseFloat(potentialDelayTime) > 0 ? null :
+                        Float.parseFloat(potentialDelayTime) >= 0f ? null :
                                 potentialDelayTime.replaceAll("-", "");
 
         System.out.println(delayTime);
