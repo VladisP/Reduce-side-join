@@ -17,7 +17,7 @@ import java.io.IOException;
 
 public class ReduceSideJoin {
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws Exception {
 
         Job job = Job.getInstance();
         job.setJarByClass(ReduceSideJoin.class);
