@@ -14,11 +14,11 @@ public class AirportTableWritable implements Writable {
 
     public AirportTableWritable(Text text) {
         String[] columns = text.toString().replaceAll("\"", "").split(",");
-        airportId = columns[0];
+        airportId = Integer.parseInt(columns[0]);
         airportName = columns[1];
     }
 
-    public String getAirportId() {
+    public int getAirportId() {
         return airportId;
     }
 
@@ -28,13 +28,13 @@ public class AirportTableWritable implements Writable {
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-        dataOutput.writeUTF(airportId);
+        dataOutput.writeInt(airportId);
         dataOutput.writeUTF(airportName);
     }
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
-        airportId = dataInput.readUTF();
+        airportId = dataInput.readInt();
         airportName = dataInput.readUTF();
     }
 }

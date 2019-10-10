@@ -11,6 +11,11 @@ public class AirportsIdWritable implements WritableComparable<AirportsIdWritable
     private int airportId;
     private int dataSetId;
 
+    public AirportsIdWritable(int airportId, int dataSetId) {
+        this.airportId = airportId;
+        this.dataSetId = dataSetId;
+    }
+
     @Override
     public int compareTo(AirportsIdWritable o) {
 
