@@ -15,6 +15,8 @@ public class AirportIdComparator extends WritableComparator {
         int firstAirportId = ((AirportsIdWritable) a).getAirportId();
         int secondAirportId = ((AirportsIdWritable) b).getAirportId();
 
+        System.out.println("IM HERE!!!");
+
         return Integer.compare(firstAirportId, secondAirportId);
     }
 }
