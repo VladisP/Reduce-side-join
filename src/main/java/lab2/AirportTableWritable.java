@@ -18,13 +18,13 @@ public class AirportTableWritable implements Writable {
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-        dataOutput.writeUTF();
-        dataOutput.writeBytes(airportId);
-        dataOutput.writeBytes(airportName);
+        dataOutput.writeUTF(airportId);
+        dataOutput.writeUTF(airportName);
     }
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
-        airportName = dataInput.readLine();
+        airportId = dataInput.readUTF();
+        airportName = dataInput.readUTF();
     }
 }
