@@ -10,6 +10,8 @@ public class AirportNameWritable implements Writable {
 
     private String airportName;
 
+    
+
     @Override
     public void write(DataOutput dataOutput) throws IOException {
         dataOutput.writeBytes(airportName);
@@ -17,6 +19,6 @@ public class AirportNameWritable implements Writable {
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
-        dataInput.rex
+        airportName = dataInput.readLine();
     }
 }
