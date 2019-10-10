@@ -16,11 +16,13 @@ public class FlightTableWritable implements Writable {
         String[] columns = text.toString().replaceAll(",", ",\"").split(",");
 
         String potentialDestAirportId = columns[14].replaceAll("\"", "");
-        destAirportId = potentialDestAirportId.equals() Integer.parseInt();
+
+        destAirportId = potentialDestAirportId.equals("DEST_AIRPORT_ID") ? -1 :
+                Integer.parseInt(potentialDestAirportId);
 
         String potentialDelayTime = columns[17].replaceAll("\"", "");
 
-        delayTime = potentialDelayTime.equals("") ? null :
+        delayTime = potentialDelayTime.equals("") potentialDelayTime.equals("") ? null :
                 Float.parseFloat(potentialDelayTime) > 0 ? null :
                         potentialDelayTime.replaceAll("-", "");
     }
