@@ -8,6 +8,11 @@ public class AirportIdPartitioner extends HashPartitioner<AirportsIdWritable, Te
 
     @Override
     public int getPartition(AirportsIdWritable key, Text value, int numReduceTasks) {
-        return (Integer.valueOf(key.getAirportId()).hashCode() & Integer.MAX_VALUE) % numReduceTasks;
+
+        System.out.println(key.getAirportId() + " " + key.getDataSetId());
+
+        int partition = (Integer.valueOf(key.getAirportId()).hashCode() & Integer.MAX_VALUE) % numReduceTasks;
+
+        return partition;
     }
 }
