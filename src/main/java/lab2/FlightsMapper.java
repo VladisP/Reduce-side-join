@@ -5,8 +5,6 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
-import java.util.Optional;
-import java.util.function.Consumer;
 
 public class FlightsMapper extends Mapper<LongWritable, Text, AirportsIdWritable, Text> {
 
@@ -15,8 +13,10 @@ public class FlightsMapper extends Mapper<LongWritable, Text, AirportsIdWritable
 
         FlightTableWritable flightTable = new FlightTableWritable(value);
 
-        Optional.ofNullable(flightTable.getDelayTime()).
-                ifPresent(s -> context.write(new AirportsIdWritable(flightTable.getDestAirportId(), 1),
-                        new Text(s)));
+        if (flightTable.getDelayTime() != null) {
+
+            context.write(new AirportsIdWritable(flightTable.getDestAirportId(), 1),
+                    new Text(flightTable.getDelayTime()));
+        }
     }
 }
