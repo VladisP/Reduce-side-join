@@ -1,5 +1,6 @@
 package lab2.mappers;
 
+import lab2.CsvParser;
 import lab2.writables.AirportsIdWritable;
 import lab2.writables.FlightTableWritable;
 import org.apache.hadoop.io.LongWritable;
@@ -13,7 +14,8 @@ public class FlightsMapper extends Mapper<LongWritable, Text, AirportsIdWritable
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
 
-        FlightTableWritable flightTable = new FlightTableWritable(value);
+        String[] columns = CsvParser.getColumns(text, true);
+        String potentialDestAirportId = CsvParser.getColumn(columns, DEST_AIRPORT_ID_COLUMN);
 
         if ((flightTable.getDestAirportId() != -1) && (flightTable.getDelayTime() != null)) {
 

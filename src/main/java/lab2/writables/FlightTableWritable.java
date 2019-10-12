@@ -14,7 +14,7 @@ public class FlightTableWritable implements Writable {
     private String delayTime;
 
     private static final int DEST_AIRPORT_ID_COLUMN = 14;
-    private static final int DELAY_TIME_COLUMN = 17;
+    private static final int DELAY_TIME_COLUMN = 18;
 
     public FlightTableWritable(Text text) {
 //        String[] columns = text.toString().replaceAll(",", ",\"").split(",");
@@ -22,17 +22,29 @@ public class FlightTableWritable implements Writable {
 //        String potentialDestAirportId = columns[14].replaceAll("\"", "");
 
         String[] columns = CsvParser.getColumns(text, true);
-        String potentialDestAirportId = CsvParser.getColumn(columns, )
+        String potentialDestAirportId = CsvParser.getColumn(columns, DEST_AIRPORT_ID_COLUMN);
 
         destAirportId = potentialDestAirportId.equals("DEST_AIRPORT_ID") ? -1 :
                 Integer.parseInt(potentialDestAirportId);
 
 //        String potentialDelayTime = columns[17].replaceAll("\"", "");
 
-        delayTime = potentialDelayTime.equals("ARR_DELAY") ? null :
-                potentialDelayTime.equals("") ? null :
-                        Float.parseFloat(potentialDelayTime) >= 0 ? null :
-                                potentialDelayTime.replaceAll("-", "");
+        String potentialDelayTime = CsvParser.getColumn(columns, DELAY_TIME_COLUMN);
+
+        if (potentialDelayTime.equals("ARR_DELAY") ||
+                potentialDelayTime.equals("") ||
+                Float.parseFloat(potentialDelayTime) == 0f) {
+
+            delayTime = null;
+
+        } else {
+            delayTime = potentialDelayTime;
+        }
+
+//        delayTime = potentialDelayTime.equals("ARR_DELAY") ? null :
+//                potentialDelayTime.equals("") ? null :
+//                        Float.parseFloat(potentialDelayTime) >= 0 ? null :
+//                                potentialDelayTime.replaceAll("-", "");
     }
 
     public int getDestAirportId() {
