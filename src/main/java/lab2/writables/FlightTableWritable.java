@@ -1,5 +1,6 @@
 package lab2.writables;
 
+import lab2.CsvParser;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.Writable;
 
@@ -12,15 +13,21 @@ public class FlightTableWritable implements Writable {
     private int destAirportId;
     private String delayTime;
 
-    public FlightTableWritable(Text text) {
-        String[] columns = text.toString().replaceAll(",", ",\"").split(",");
+    private static final int DEST_AIRPORT_ID_COLUMN = 14;
+    private static final int DELAY_TIME_COLUMN = 17;
 
-        String potentialDestAirportId = columns[14].replaceAll("\"", "");
+    public FlightTableWritable(Text text) {
+//        String[] columns = text.toString().replaceAll(",", ",\"").split(",");
+
+//        String potentialDestAirportId = columns[14].replaceAll("\"", "");
+
+        String[] columns = CsvParser.getColumns(text, true);
+        String potentialDestAirportId = CsvParser.getColumn(columns, )
 
         destAirportId = potentialDestAirportId.equals("DEST_AIRPORT_ID") ? -1 :
                 Integer.parseInt(potentialDestAirportId);
 
-        String potentialDelayTime = columns[17].replaceAll("\"", "");
+//        String potentialDelayTime = columns[17].replaceAll("\"", "");
 
         delayTime = potentialDelayTime.equals("ARR_DELAY") ? null :
                 potentialDelayTime.equals("") ? null :
