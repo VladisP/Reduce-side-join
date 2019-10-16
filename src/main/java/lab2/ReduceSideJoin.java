@@ -5,7 +5,7 @@ import lab2.mappers.AirportsMapper;
 import lab2.mappers.FlightsMapper;
 import lab2.partitioner.AirportIdPartitioner;
 import lab2.reducer.DelayReducer;
-import lab2.writables.AirportsIdWritable;
+import lab2.writables.KeyDatasetPair;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
@@ -29,7 +29,7 @@ public class ReduceSideJoin {
         job.setGroupingComparatorClass(AirportIdComparator.class);
         job.setReducerClass(DelayReducer.class);
 
-        job.setMapOutputKeyClass(AirportsIdWritable.class);
+        job.setMapOutputKeyClass(KeyDatasetPair.class);
         job.setMapOutputValueClass(Text.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);

@@ -1,16 +1,16 @@
 package lab2.reducer;
 
-import lab2.writables.AirportsIdWritable;
+import lab2.writables.KeyDatasetPair;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 
 import java.io.IOException;
 import java.util.Iterator;
 
-public class DelayReducer extends Reducer<AirportsIdWritable, Text, Text, Text> {
+public class DelayReducer extends Reducer<KeyDatasetPair, Text, Text, Text> {
 
     @Override
-    protected void reduce(AirportsIdWritable key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
+    protected void reduce(KeyDatasetPair key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
 
         Iterator<Text> iterator = values.iterator();
         Text airportName = new Text(iterator.next());

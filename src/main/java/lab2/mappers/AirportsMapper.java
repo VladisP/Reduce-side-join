@@ -1,14 +1,14 @@
 package lab2.mappers;
 
 import lab2.CsvParser;
-import lab2.writables.AirportsIdWritable;
+import lab2.writables.KeyDatasetPair;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
 
-public class AirportsMapper extends Mapper<LongWritable, Text, AirportsIdWritable, Text> {
+public class AirportsMapper extends Mapper<LongWritable, Text, KeyDatasetPair, Text> {
 
     private static final int AIRPORT_ID_COLUMN = 0;
     private static final int AIRPORT_NAME_COLUMN = 1;
@@ -35,7 +35,7 @@ public class AirportsMapper extends Mapper<LongWritable, Text, AirportsIdWritabl
 
         if (airportId != -1) {
 
-            context.write(new AirportsIdWritable(airportId, 0),
+            context.write(new KeyDatasetPair(airportId, 0),
                     new Text(getAirportName(columns)));
         }
     }

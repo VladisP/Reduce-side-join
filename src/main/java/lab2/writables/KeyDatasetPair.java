@@ -6,15 +6,15 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-public class AirportsIdWritable implements WritableComparable<AirportsIdWritable> {
+public class KeyDatasetPair implements WritableComparable<KeyDatasetPair> {
 
     private int airportId;
     private int dataSetId;
 
-    public AirportsIdWritable() {
+    public KeyDatasetPair() {
     }
 
-    public AirportsIdWritable(int airportId, int dataSetId) {
+    public KeyDatasetPair(int airportId, int dataSetId) {
         this.airportId = airportId;
         this.dataSetId = dataSetId;
     }
@@ -24,7 +24,7 @@ public class AirportsIdWritable implements WritableComparable<AirportsIdWritable
     }
 
     @Override
-    public int compareTo(AirportsIdWritable o) {
+    public int compareTo(KeyDatasetPair o) {
 
         return (airportId < o.airportId) ? -1 :
                 (airportId > o.airportId) ? 1 :
