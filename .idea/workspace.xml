@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35c86273-25b9-4522-a5bf-bc90e5a8bcdc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/lab2/ReduceSideJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab2/ReduceSideJoin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lab2/comparator/AirportIdComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab2/comparator/AirportIdComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lab2/mappers/AirportsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab2/mappers/AirportsMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lab2/mappers/FlightsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab2/mappers/FlightsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lab2/partitioner/AirportIdPartitioner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab2/partitioner/AirportIdPartitioner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lab2/reducer/DelayReducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab2/reducer/DelayReducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lab2/writables/AirportsIdWritable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab2/writables/KeyDatasetPair.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

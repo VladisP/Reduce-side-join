@@ -13,7 +13,7 @@ public class FlightsMapper extends Mapper<LongWritable, Text, KeyDatasetPair, Te
     private static final int DEST_AIRPORT_ID_COLUMN = 14;
     private static final int DELAY_TIME_COLUMN = 18;
     private static final String ID_HEAD_VALUE = "DEST_AIRPORT_ID";
-    private static final String DELAY_HEAD_VALUE = "ARR_DELAY";
+    private static final String DELAY_HEAD_VALUE = "ARR_DELAY_NEW";
 
     private int getDestAirportId(String[] columns) {
         String potentialDestAirportId = columns[DEST_AIRPORT_ID_COLUMN];
