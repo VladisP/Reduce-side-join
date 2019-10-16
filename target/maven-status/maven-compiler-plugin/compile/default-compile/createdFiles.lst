@@ -1,9 +1,8 @@
+lab2/CsvParser.class
 lab2/ReduceSideJoin.class
 lab2/reducer/DelayReducer.class
 lab2/mappers/FlightsMapper.class
 lab2/comparator/AirportIdComparator.class
+lab2/writables/KeyDatasetPair.class
 lab2/mappers/AirportsMapper.class
 lab2/partitioner/AirportIdPartitioner.class
-lab2/writables/FlightTableWritable.class
-lab2/writables/AirportTableWritable.class
-lab2/writables/AirportsIdWritable.class
