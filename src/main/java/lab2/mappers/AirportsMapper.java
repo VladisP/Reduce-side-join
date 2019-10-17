@@ -21,7 +21,6 @@ public class AirportsMapper extends Mapper<LongWritable, Text, KeyDatasetPair, T
     }
 
     private String getAirportName(String[] columns) {
-
         return columns.length == 3 ?
                 columns[AIRPORT_NAME_COLUMN] + columns[AIRPORT_NAME_COLUMN + 1] :
                 columns[AIRPORT_NAME_COLUMN];
